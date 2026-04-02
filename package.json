@@ -42,7 +42,7 @@
     "@arethetypeswrong/cli": "^0.17.1",
     "@biomejs/biome": "^2.3.4",
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.7",
+    "@changesets/cli": "^2.30.0",
     "@clack/prompts": "~0.11.0",
     "@size-limit/preset-big-lib": "^11.2.0",
     "@size-limit/webpack": "^11.2.0",
@@ -146,7 +146,7 @@
     "overrides": {
       "abitype": "latest",
       "ox": "catalog:",
-      "porto": "workspace:*",
+      "@splits/porto": "workspace:*",
       "viem": "catalog:",
       "@hpke/core@<=1.7.4": ">=1.7.5",
       "@metamask/sdk-communication-layer@>=0.16.0 <=0.33.0": "0.33.1",
@@ -156,6 +156,7 @@
       "body-parser@>=2.2.0 <2.2.1": ">=2.2.1",
       "brace-expansion@>=1.0.0 <=1.1.11": "1.1.12",
       "brace-expansion@>=2.0.0 <=2.0.1": "2.0.2",
+      "read-yaml-file": "2.1.0",
       "form-data@>=4.0.0 <4.0.4": "4.0.4",
       "glob@>=10.2.0 <10.5.0": ">=10.5.0",
       "hono@<4.10.3": "4.10.3",
@@ -192,7 +193,7 @@
     }
   },
   "[!start-pkg]": {},
-  "name": "porto",
+  "name": "@splits/porto",
   "description": "Next-gen Account for Ethereum",
   "version": "0.2.37",
   "type": "module",
@@ -202,6 +203,9 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "files": [
     "dist",

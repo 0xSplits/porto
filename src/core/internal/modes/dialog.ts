@@ -951,7 +951,9 @@ export function dialog(parameters: dialog.Parameters = {}) {
           throw new Error('Cannot switch chain for method: ' + request.method)
 
         if (!renderer.supportsHeadless)
-          return fallback.actions.switchChain?.(parameters)
+          return (fallback.actions as Mode.Mode['actions']).switchChain?.(
+            parameters,
+          )
 
         const provider = getProvider(store)
         return await provider.request(request)

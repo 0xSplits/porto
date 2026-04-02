@@ -16,7 +16,7 @@
     "@tanstack/react-query": "catalog:",
     "@tanstack/react-query-persist-client": "catalog:",
     "cva": "catalog:",
-    "porto": "workspace:*",
+    "porto": "npm:@splits/porto@workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:",
     "react-router": "^7.2.0",

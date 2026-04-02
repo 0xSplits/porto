@@ -17,7 +17,7 @@
     "eruda": "^3.4.3",
     "mipd": "^0.0.7",
     "ox": "catalog:",
-    "porto": "workspace:*",
+    "porto": "npm:@splits/porto@workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tailwindcss": "catalog:",

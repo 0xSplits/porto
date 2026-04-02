@@ -2,4 +2,4 @@
 "@splits/porto": patch
 ---
 
-Bumped Viem version
+Fix new chains
