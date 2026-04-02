@@ -12,7 +12,7 @@
   "dependencies": {
     "@porto/apps": "workspace:*",
     "@tanstack/react-query": "catalog:",
-    "porto": "workspace:*",
+    "porto": "npm:@splits/porto@workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:",
     "viem": "catalog:",
