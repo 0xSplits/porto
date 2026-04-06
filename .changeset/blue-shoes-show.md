@@ -1,5 +1,0 @@
----
-"@splits/porto": patch
----
-
-Bumped Viem version

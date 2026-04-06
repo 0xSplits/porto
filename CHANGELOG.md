@@ -1,5 +1,12 @@
 # porto
 
+## 0.2.38
+
+### Patch Changes
+
+- 2fa38df: Bumped Viem version
+- 1bfcacb: Fix new chains
+
 ## 0.2.37
 
 ### Patch Changes
