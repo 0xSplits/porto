@@ -7,7 +7,7 @@ import * as Anvil from '../../test/src/anvil.js'
 import * as TestConfig from '../../test/src/config.js'
 import * as Relay from '../../test/src/relay.js'
 import * as AccountContract from './ContractActions.js'
-import { ContractActions } from './index.js'
+import * as ContractActions from './ContractActions.js'
 import * as Key from './Key.js'
 import * as RelayActions from './RelayActions.js'
 

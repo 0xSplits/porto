@@ -1,4 +1,0 @@
-* text=auto
-.gitattributes !filter !diff
-
-apple-app-site-association linguist-language=JSON

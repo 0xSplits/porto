@@ -1,5 +1,5 @@
 import { Porto } from 'porto'
-import { RelayClient } from 'porto/viem'
+import * as RelayClient from './RelayClient.js'
 import { describe, expect, test } from 'vitest'
 
 describe('fromPorto', () => {
