@@ -10,7 +10,6 @@ import {
   WebCryptoP256,
 } from 'ox'
 import { Key, Mode } from 'porto'
-import { Route } from 'porto/server'
 import { encodeFunctionData, hashMessage, hashTypedData } from 'viem'
 import {
   readContract,
@@ -22,6 +21,9 @@ import {
   waitForTransactionReceipt,
 } from 'viem/actions'
 import { describe, expect, test } from 'vitest'
+
+// Route was removed when porto/server was culled; these tests are skipped
+declare const Route: any
 
 import { accountOldProxyAddress } from '../../../test/src/_generated/addresses.js'
 import { createAccount, setBalance } from '../../../test/src/actions.js'
@@ -1932,7 +1934,8 @@ describe.each([['relay', Mode.relay]] as const)('%s', (type, mode) => {
       },
     )
 
-    test.runIf(type === 'relay')('behavior: merchant fee sponsor', async () => {
+    // TODO: Requires porto/server (removed during fork culling)
+    test.skip('behavior: merchant fee sponsor', async () => {
       const porto = getPorto()
       const client = TestConfig.getRelayClient(porto)
       const contracts = await TestConfig.getContracts(porto)
@@ -1943,7 +1946,7 @@ describe.each([['relay', Mode.relay]] as const)('%s', (type, mode) => {
         keys: [merchantKey],
       })
 
-      const listener = Route.merchant({
+      const listener = (Route as any).merchant({
         ...porto.config,
         address: merchantAccount.address,
         key: {
@@ -2032,7 +2035,8 @@ describe.each([['relay', Mode.relay]] as const)('%s', (type, mode) => {
       expect(merchantBalance_post).toBeLessThan(merchantBalance_pre)
     })
 
-    test('behavior: merchant fee sponsor (porto config)', async () => {
+    // TODO: Requires porto/server (removed during fork culling)
+    test.skip('behavior: merchant fee sponsor (porto config)', async () => {
       const p = getPorto()
       const client = TestConfig.getRelayClient(p)
       const contracts = await TestConfig.getContracts(p)
@@ -2043,7 +2047,7 @@ describe.each([['relay', Mode.relay]] as const)('%s', (type, mode) => {
         keys: [merchantKey],
       })
 
-      const listener = Route.merchant({
+      const listener = (Route as any).merchant({
         ...p.config,
         address: merchantAccount.address,
         key: {

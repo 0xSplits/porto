@@ -1,7 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "github": {
-    "autoJobCancelation": true
-  },
-  "routes": [{ "dest": "/dialog", "src": "/dialog/[^.]+", "status": 200 }]
-}
