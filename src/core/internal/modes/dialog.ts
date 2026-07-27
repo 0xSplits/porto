@@ -918,7 +918,7 @@ export function dialog(parameters: dialog.Parameters = {}) {
       },
 
       async signPersonalMessage(parameters) {
-        const { internal } = parameters
+        const { chainId, internal } = parameters
         const { store, request } = internal
 
         if (request.method !== 'personal_sign')
@@ -927,11 +927,17 @@ export function dialog(parameters: dialog.Parameters = {}) {
           )
 
         const provider = getProvider(store)
-        return await provider.request(request)
+        return await provider.request({
+          ...request,
+          // Sign payloads have no chain slot in their params (unlike
+          // `eth_sendTransaction`), so the app's active chain rides alongside
+          // for dialogs whose signatures are chain-bound.
+          ...(chainId ? { _meta: { chainId } } : {}),
+        })
       },
 
       async signTypedData(parameters) {
-        const { internal } = parameters
+        const { chainId, internal } = parameters
         const { store, request } = internal
 
         if (request.method !== 'eth_signTypedData_v4')
@@ -940,7 +946,10 @@ export function dialog(parameters: dialog.Parameters = {}) {
           )
 
         const provider = getProvider(store)
-        return await provider.request(request)
+        return await provider.request({
+          ...request,
+          ...(chainId ? { _meta: { chainId } } : {}),
+        })
       },
 
       async switchChain(parameters) {
