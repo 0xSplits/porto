@@ -1,5 +1,11 @@
 # porto
 
+## 0.2.39
+
+### Patch Changes
+
+- ee3428e: Forward the app's active chain ID (`_meta.chainId`) on `personal_sign` and `eth_signTypedData_v4` dialog requests
+
 ## 0.2.38
 
 ### Patch Changes
