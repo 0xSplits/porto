@@ -292,6 +292,7 @@ export function from<
 
               const signature = await getMode().actions.signTypedData({
                 account,
+                chainId: client.chain.id,
                 data,
                 internal: {
                   client,
@@ -749,6 +750,7 @@ export function from<
 
               const signature = await getMode().actions.signPersonalMessage({
                 account,
+                chainId: client.chain.id,
                 data,
                 internal: {
                   client,

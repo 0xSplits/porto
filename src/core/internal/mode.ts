@@ -304,6 +304,8 @@ export type Mode = {
     signPersonalMessage: (parameters: {
       /** Account to sign the message with. */
       account: Account.Account
+      /** Chain ID of the app's active chain. */
+      chainId?: number | undefined
       /** Data to sign. */
       data: Hex.Hex
       /** Internal properties. */
@@ -313,6 +315,8 @@ export type Mode = {
     signTypedData: (parameters: {
       /** Account to sign the message with. */
       account: Account.Account
+      /** Chain ID of the app's active chain. */
+      chainId?: number | undefined
       /** Data to sign. */
       data: string
       /** Internal properties. */
