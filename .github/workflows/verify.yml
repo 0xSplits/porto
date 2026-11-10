@@ -2,6 +2,9 @@ name: Verify
 on:
   workflow_call:
 
+permissions:
+  contents: read
+
 jobs:
   checks:
     name: Checks
@@ -10,7 +13,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           submodules: 'recursive'
 
@@ -36,7 +39,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           submodules: 'recursive'
 

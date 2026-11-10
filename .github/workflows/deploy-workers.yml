@@ -21,6 +21,9 @@ defaults:
 env:
   ACTIONS_RUNNER_DEBUG: true
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: 'Deploy'

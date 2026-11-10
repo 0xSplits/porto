@@ -4,6 +4,9 @@ on:
   issues:
     types: [labeled]
 
+permissions:
+  contents: read
+
 jobs:
   issue-labeled:
     if: ${{ github.repository_owner == 'ithacaxyz' }}
