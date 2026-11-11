@@ -6,9 +6,6 @@ on:
         description: "The URL of the uploaded extension artifact"
         value: ${{ jobs.extension.outputs.artifact-url }}
 
-permissions:
-  contents: read
-
 jobs:
   extension:
     name: Extension

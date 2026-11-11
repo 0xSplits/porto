@@ -10,9 +10,6 @@ on:
       - hotfix-dialog
       - hotfix-id-dialog
 
-permissions:
-  contents: read
-
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
